@@ -3,7 +3,7 @@ import { Component } from 'react';
 import { Counter } from '../components';
 import { BehaviorSubject, Subscription } from 'rxjs';
 
-export class Sample extends Component<null, { count: number }> {
+export class Sample extends Component<any, { count: number }> {
   count$ = new BehaviorSubject(0);
   subscription: Subscription;
   constructor(props) {
@@ -23,11 +23,14 @@ export class Sample extends Component<null, { count: number }> {
   render() {
     const { count } = this.state;
     return (
-      <Counter
-        count={count}
-        plusOne={() => this.count$.next(this.count$.value + 1)}
-        minusOne={() => this.count$.next(this.count$.value - 1)}
-      />
+      <div>
+        <h2>sample</h2>
+        <Counter
+          count={count}
+          plusOne={() => this.count$.next(this.count$.value + 1)}
+          minusOne={() => this.count$.next(this.count$.value - 1)}
+        />
+      </div>
     );
   }
 }

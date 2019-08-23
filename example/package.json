@@ -8,9 +8,13 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "@types/react-redux": "^7.1.2",
     "@types/react-router-dom": "^4.3.5",
     "react-app-polyfill": "^1.0.0",
-    "react-router-dom": "^5.0.1"
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.4",
+    "redux-observable": "^1.1.0"
   },
   "alias": {
     "react": "../node_modules/react",
