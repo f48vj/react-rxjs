@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { UseObservable } from './pages'; 
+import { Sample, UseObservable } from './pages'; 
 
 export function AppRouter() {
   return (
@@ -8,13 +8,17 @@ export function AppRouter() {
       <div>
         <nav>
           <ul>
+          <li>
+              <Link to="/sample/">sample</Link>
+            </li>
             <li>
               <Link to="/useObservable/">useObservable</Link>
             </li>
           </ul>
         </nav>
 
-        <Route path="/" exact component={UseObservable} />
+        <Route path="/" exact component={Sample} />
+        <Route path="/sample/" component={Sample} />
         <Route path="/useObservable/" component={UseObservable} />
       </div>
     </Router>
