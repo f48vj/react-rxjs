@@ -1,1 +1,1 @@
-export * from './hooks/use-observable';
+export * from './useObservable';
